@@ -275,13 +275,7 @@ if test "x$want_boost" = "xyes"; then
             AC_MSG_NOTICE([Your boost libraries seems to old (version $_version).])
         fi
         # execute ACTION-IF-NOT-FOUND (if present):
-        ifelse([$3], , :, [$3])
-    else
-        AC_SUBST(BOOST_CPPFLAGS)
-        AC_SUBST(BOOST_LDFLAGS)
-        AC_DEFINE(HAVE_BOOST,,[define if the Boost library is available])
-        # execute ACTION-IF-FOUND (if present):
-        ifelse([$2], , :, [$2])
+        ifelse([$3], , :, [$3]
     fi
 
     CPPFLAGS="$CPPFLAGS_SAVED"
